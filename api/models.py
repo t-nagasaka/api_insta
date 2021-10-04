@@ -98,7 +98,7 @@ class Post(models.Model):
     # upload_toで保存するパスを指定
     img = models.ImageField(blank=True, null=True, upload_to=upload_post_path)
     # 関連する対象のモデルを指定, 呼び名の指定
-    linked = models.ManyToManyField(settings.AUTH_USER_MODEL,
+    liked = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                     related_name='liked',
                                     blank=True)
 
